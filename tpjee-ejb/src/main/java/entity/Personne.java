@@ -2,6 +2,7 @@ package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Personne {
@@ -9,6 +10,10 @@ public class Personne {
 	@Id
 	private String nom;
 	private int salaire;
+	
+	@ManyToOne
+	private Magasin magasin;
+	
 	
 	public Personne(){
 		

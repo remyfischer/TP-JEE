@@ -1,7 +1,10 @@
 package entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Magasin {
@@ -9,6 +12,12 @@ public class Magasin {
 	@Id
 	private int id;
 	private String adresse;
+	
+	@OneToMany(mappedBy="magasin")
+	private List<Personne> employes;
+	
+	@OneToMany(mappedBy="magasin")
+	private List<Article> articles;
 
 	public Magasin(){
 		
@@ -16,6 +25,9 @@ public class Magasin {
 		adresse = "cours gambetta";
 		
 	}
+	
+
+;
 	
 	public int getId() {
 		return id;
