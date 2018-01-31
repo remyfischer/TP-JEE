@@ -14,10 +14,10 @@ public class Magasin {
 	private String adresse;
 	
 	@OneToMany(mappedBy="magasin")
-	private List<Personne> employes;
+	private List<Personne> listeEmployés;
 	
 	@OneToMany(mappedBy="magasin")
-	private List<Article> articles;
+	private List<Article> listeArticles;
 
 	public Magasin(){
 		
