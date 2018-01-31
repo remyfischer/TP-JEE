@@ -21,12 +21,10 @@ public class Controller implements ControllerInterface{
 		Personne personne = new Personne();
 		Magasin magasin = new Magasin();
 		
-		em.getTransaction().begin();
 		em.persist(directeur);
 		em.persist(personne);
 		em.persist(magasin);
 		
-		em.getTransaction().commit();
 		em.close();
 		
 	}
